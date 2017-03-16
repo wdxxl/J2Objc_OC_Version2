@@ -15,6 +15,7 @@
 		E64D2DE01E795509001EFCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64D2DDE1E795509001EFCAC /* LaunchScreen.storyboard */; };
 		E64D2DEB1E795509001EFCAC /* J2Objc_OC_Version2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DEA1E795509001EFCAC /* J2Objc_OC_Version2Tests.m */; };
 		E64D2DF61E795509001EFCAC /* J2Objc_OC_Version2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DF51E795509001EFCAC /* J2Objc_OC_Version2UITests.m */; };
+		E64D2E051E7955A9001EFCAC /* Hello.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2E041E7955A9001EFCAC /* Hello.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E64D2DF11E795509001EFCAC /* J2Objc_OC_Version2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = J2Objc_OC_Version2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D2DF51E795509001EFCAC /* J2Objc_OC_Version2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = J2Objc_OC_Version2UITests.m; sourceTree = "<group>"; };
 		E64D2DF71E795509001EFCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E64D2E031E7955A9001EFCAC /* Hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hello.h; sourceTree = "<group>"; };
+		E64D2E041E7955A9001EFCAC /* Hello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hello.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		E64D2DCF1E795509001EFCAC /* J2Objc_OC_Version2 */ = {
 			isa = PBXGroup;
 			children = (
+				E64D2E031E7955A9001EFCAC /* Hello.h */,
+				E64D2E041E7955A9001EFCAC /* Hello.m */,
 				E64D2DD31E795509001EFCAC /* AppDelegate.h */,
 				E64D2DD41E795509001EFCAC /* AppDelegate.m */,
 				E64D2DD61E795509001EFCAC /* ViewController.h */,
@@ -278,6 +283,7 @@
 			files = (
 				E64D2DD81E795509001EFCAC /* ViewController.m in Sources */,
 				E64D2DD51E795509001EFCAC /* AppDelegate.m in Sources */,
+				E64D2E051E7955A9001EFCAC /* Hello.m in Sources */,
 				E64D2DD21E795509001EFCAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +434,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 646945T82S;
+				FRAMEWORK_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/frameworks";
 				INFOPLIST_FILE = J2Objc_OC_Version2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "wdxxl.J2Objc-OC-Version2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/include";
 			};
 			name = Debug;
 		};
@@ -440,10 +450,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 646945T82S;
+				FRAMEWORK_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/frameworks";
 				INFOPLIST_FILE = J2Objc_OC_Version2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "wdxxl.J2Objc-OC-Version2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/include";
 			};
 			name = Release;
 		};
