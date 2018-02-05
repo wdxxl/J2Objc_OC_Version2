@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "J2Objc_OC_Version2/Hello.java"
+            timestampString = "539529398.931024"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "mark()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Hello init]"
+                  moduleName = "J2Objc_OC_Version2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oukagaku/IOS_Demo/J2Objc_OC_Version2/J2Objc_OC_Version2/Hello.java"
+                  timestampString = "539529399.030285"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[Hello mark]"
+                  moduleName = "J2Objc_OC_Version2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oukagaku/IOS_Demo/J2Objc_OC_Version2/J2Objc_OC_Version2/Hello.java"
+                  timestampString = "539529399.039449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hello_mark"
+                  moduleName = "J2Objc_OC_Version2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oukagaku/IOS_Demo/J2Objc_OC_Version2/J2Objc_OC_Version2/Hello.java"
+                  timestampString = "539529399.045664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

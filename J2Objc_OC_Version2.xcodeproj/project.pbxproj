@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11649F532028938400D75217 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11649F522028938400D75217 /* libiconv.tbd */; };
 		E64D2DD21E795509001EFCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DD11E795509001EFCAC /* main.m */; };
 		E64D2DD51E795509001EFCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DD41E795509001EFCAC /* AppDelegate.m */; };
 		E64D2DD81E795509001EFCAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DD71E795509001EFCAC /* ViewController.m */; };
@@ -15,8 +16,22 @@
 		E64D2DE01E795509001EFCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64D2DDE1E795509001EFCAC /* LaunchScreen.storyboard */; };
 		E64D2DEB1E795509001EFCAC /* J2Objc_OC_Version2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DEA1E795509001EFCAC /* J2Objc_OC_Version2Tests.m */; };
 		E64D2DF61E795509001EFCAC /* J2Objc_OC_Version2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2DF51E795509001EFCAC /* J2Objc_OC_Version2UITests.m */; };
-		E64D2E051E7955A9001EFCAC /* Hello.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D2E041E7955A9001EFCAC /* Hello.m */; };
+		E658B63A1E7A7C55007AE1F9 /* Hello.java in Sources */ = {isa = PBXBuildFile; fileRef = E658B6391E7A7C55007AE1F9 /* Hello.java */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E658B63B1E7A7C89007AE1F9 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.java;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.h",
+				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.m",
+			);
+			script = "if [ ! -f \"${J2OBJC_HOME}/j2objc\" ]; then echo \"J2OBJC_HOME not correctly defined in Settings.xcconfig, currently set to '${J2OBJC_HOME}'\"; exit 1; fi;\n\"${J2OBJC_HOME}/j2objc\" -d ${DERIVED_FILES_DIR} -sourcepath \"${PROJECT_DIR}\" --prefix main=DT -g ${INPUT_FILE_PATH};";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		E64D2DE71E795509001EFCAC /* PBXContainerItemProxy */ = {
@@ -36,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11649F522028938400D75217 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		E64D2DCD1E795509001EFCAC /* J2Objc_OC_Version2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J2Objc_OC_Version2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D2DD11E795509001EFCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E64D2DD31E795509001EFCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +68,7 @@
 		E64D2DF11E795509001EFCAC /* J2Objc_OC_Version2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = J2Objc_OC_Version2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D2DF51E795509001EFCAC /* J2Objc_OC_Version2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = J2Objc_OC_Version2UITests.m; sourceTree = "<group>"; };
 		E64D2DF71E795509001EFCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E64D2E031E7955A9001EFCAC /* Hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hello.h; sourceTree = "<group>"; };
-		E64D2E041E7955A9001EFCAC /* Hello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hello.m; sourceTree = "<group>"; };
+		E658B6391E7A7C55007AE1F9 /* Hello.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Hello.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11649F532028938400D75217 /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11649F512028938300D75217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11649F522028938400D75217 /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E64D2DC41E795509001EFCAC = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +112,8 @@
 				E64D2DE91E795509001EFCAC /* J2Objc_OC_Version2Tests */,
 				E64D2DF41E795509001EFCAC /* J2Objc_OC_Version2UITests */,
 				E64D2DCE1E795509001EFCAC /* Products */,
+				E6B5BE6B20288C70007E7426 /* Recovered References */,
+				11649F512028938300D75217 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +130,7 @@
 		E64D2DCF1E795509001EFCAC /* J2Objc_OC_Version2 */ = {
 			isa = PBXGroup;
 			children = (
-				E64D2E031E7955A9001EFCAC /* Hello.h */,
-				E64D2E041E7955A9001EFCAC /* Hello.m */,
+				E658B6391E7A7C55007AE1F9 /* Hello.java */,
 				E64D2DD31E795509001EFCAC /* AppDelegate.h */,
 				E64D2DD41E795509001EFCAC /* AppDelegate.m */,
 				E64D2DD61E795509001EFCAC /* ViewController.h */,
@@ -145,6 +170,13 @@
 			path = J2Objc_OC_Version2UITests;
 			sourceTree = "<group>";
 		};
+		E6B5BE6B20288C70007E7426 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +189,7 @@
 				E64D2DCB1E795509001EFCAC /* Resources */,
 			);
 			buildRules = (
+				E658B63B1E7A7C89007AE1F9 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -283,7 +316,7 @@
 			files = (
 				E64D2DD81E795509001EFCAC /* ViewController.m in Sources */,
 				E64D2DD51E795509001EFCAC /* AppDelegate.m in Sources */,
-				E64D2E051E7955A9001EFCAC /* Hello.m in Sources */,
+				E658B63A1E7A7C55007AE1F9 /* Hello.java in Sources */,
 				E64D2DD21E795509001EFCAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,15 +466,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEVELOPMENT_TEAM = 646945T82S;
-				FRAMEWORK_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/frameworks";
+				FRAMEWORK_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks";
 				INFOPLIST_FILE = J2Objc_OC_Version2/Info.plist;
+				J2OBJC_HOME = "/j2objc-dist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/lib";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_HOME}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "wdxxl.J2Objc-OC-Version2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/include";
+				USER_HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/include ${PROJECT_DIR}/**";
 			};
 			name = Debug;
 		};
@@ -449,15 +484,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEVELOPMENT_TEAM = 646945T82S;
-				FRAMEWORK_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/frameworks";
+				FRAMEWORK_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks";
 				INFOPLIST_FILE = J2Objc_OC_Version2/Info.plist;
+				J2OBJC_HOME = "/j2objc-dist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/lib";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_HOME}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "wdxxl.J2Objc-OC-Version2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/oukagaku/j2objc-dist/include";
+				USER_HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/include ${PROJECT_DIR}/**";
 			};
 			name = Release;
 		};
@@ -530,6 +567,7 @@
 				E64D2DFC1E795509001EFCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64D2DFD1E795509001EFCAC /* Build configuration list for PBXNativeTarget "J2Objc_OC_Version2Tests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +576,7 @@
 				E64D2DFF1E795509001EFCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64D2E001E795509001EFCAC /* Build configuration list for PBXNativeTarget "J2Objc_OC_Version2UITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +585,7 @@
 				E64D2E021E795509001EFCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
